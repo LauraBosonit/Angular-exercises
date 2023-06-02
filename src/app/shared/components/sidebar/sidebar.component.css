@@ -1,0 +1,25 @@
+a {
+    border-radius: 5px;
+    color: rgb(35, 63, 107);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+a:hover {
+    background-color: rgb(56, 124, 232);
+    color: white;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px 0px;
+}
+
+.rojo {
+    border: 1px solid red;
+}
+
+
+#sidebar {
+    background-color: rgb(137, 181, 225);
+}

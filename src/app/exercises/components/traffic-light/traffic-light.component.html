@@ -1,0 +1,5 @@
+<div id="trafficLight" class="d-flex flex-column align-items-center p-3">
+    <div [ngClass]="selectedColour === 'red'? 'red m-3' : 'gray m-3'"></div>
+    <div [ngClass]="selectedColour === 'yellow' ? 'yellow m-3': 'gray m-3'"></div>
+    <div [ngClass]="selectedColour === 'green' ? 'green m-3' : 'gray m-3'"></div>
+</div>

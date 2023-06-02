@@ -1,0 +1,16 @@
+<p-sidebar [(visible)]="sidebarVisible" id="sidebar">
+    <h3>Ejercicios Angular</h3>
+    <hr>
+    <nav>
+        <ul class="mt-3">
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/one">Ejercicio 1</a></li>
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/two">Ejercicio 2</a></li>
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/three/register">Ejercicio 3</a></li>
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/four">Ejercicio 4</a></li>
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/five">Ejercicio 5</a></li>
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/six">Ejercicio 6</a></li>
+            <li><a (click)="sidebarVisible = !sidebarVisible" routerLink="/exercises/seven">Ejercicio 7</a></li>
+        </ul>
+    </nav>
+</p-sidebar>
+<p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right" styleClass="mt-3"></p-button>

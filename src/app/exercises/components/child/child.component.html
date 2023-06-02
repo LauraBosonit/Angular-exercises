@@ -1,0 +1,11 @@
+<div class="p-3 mt-5" id="child">
+    <h2>Child</h2>
+    <div>
+        <p class="text-center">Message: {{parentServiceMessage.length > 0 ? parentServiceMessage : newParentMessage}}</p>
+        <div class="button-container d-flex justify-content-center">
+            <p-button label="Use service" class="px-3" (onClick)="setServiceMessage()"></p-button>
+            <p-button label="Use Output Property" class="px-3" (click)="emitNewChildMessage()"></p-button>
+            <p-button label="Use Observable"class="px-3" (onClick)="sendMessageObservable()"></p-button>
+        </div>
+    </div>
+</div>

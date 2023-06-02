@@ -1,0 +1,49 @@
+<div class="card mt-5 mx-3">
+    <div class="cardbody p-5">
+        <h1>Ejercicio 7</h1>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <div id="counter" class=" d-flex flex-column align-items-center p-5">
+                <div class="time d-flex justify-content-center align-items-center">
+                    <p class="fs-1">{{seconds}}</p>
+                </div>
+                <div class="setup-container d-flex flex-column">
+                    <span class="align-self-start mt-3 fw-bold">
+                        <p>Setup</p>
+                    </span>
+                    <div class="setup-buttons d-flex justify-content-around">
+                        <p-button label="Start" styleClass="p-button-raised" (onClick)="startCounter()"></p-button>
+                        <p-button label="Pause" styleClass="p-button-raised" (onClick)="pauseCounter()"></p-button>
+                        <p-button label="Reset" styleClass="p-button-raised" (onClick)="resetCounter()"></p-button>
+                    </div>
+                </div>
+                <div class="count-container d-flex flex-column mt-3">
+                    <span class="align-self-start mt-3 fw-bold">
+                        <p>Count</p>
+                    </span>
+
+                    <div class="count-buttons d-flex justify-content-around">
+                        <p-button label="Count up" styleClass="p-button-raised" (onClick)="setCountUp(true)"></p-button>
+                        <p-button label="Count down" styleClass="p-button-raised" (onClick)="setCountUp(false)"></p-button>
+                    </div>
+                </div>
+                <div class="setTo-container d-flex flex-column mt-3">
+                    <span class="align-self-start mt-3 fw-bold">
+                        <p>Set to</p>
+                    </span>
+                    <div>
+                        <input type="number" class="form-control" placeholder="0" #secondsInput (keyup.enter)="setSeconds(secondsInput.value)">
+                    </div>
+                </div>
+                <div class="step-container d-flex flex-column mt-3">
+                    <span class="align-self-start mt-3 fw-bold">
+                        <p>Step</p>
+                    </span>
+                    <div>
+                        <input type="number" class="form-control" placeholder="1" #stepInput (keyup.enter)="setStep(stepInput.value)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<h2 class="mt-4 fs-4"><u>Controlador:</u></h2>
+
+<div class="controller-actions d-flex justify-content-between align-items-center py-3">
+    <select class="form-select " aria-label="Default select example" #color (click)="setLight(color.value)">
+        <option value="red">rojo</option>
+        <option value="yellow">amarillo</option>
+        <option value="green">verde</option>
+    </select>
+    
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" #lighterInput (click)="switchLight()">
+        <label class="form-check-label" for="flexCheckDefault">
+            <span [ngClass]="{'fw-bold': isLighting}">Encendido</span>/<span [ngClass]="{'fw-bold': !isLighting}">Apagado</span>
+        </label>
+    </div>
+</div>

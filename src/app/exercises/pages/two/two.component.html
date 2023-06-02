@@ -1,0 +1,20 @@
+<div class="card mt-5 mx-3">
+    <div class="card-body p-5">
+        <h1>Ejercicio 2</h1>
+        <hr>
+
+        <div class="p-3" id="parent">
+            <h2>Parent</h2>
+            <div>
+                <p class="text-center">Message: {{chidServiceMessage.length > 0 ? chidServiceMessage : receivedMessage}}</p>
+                <div class="button-container d-flex justify-content-center">
+                    <p-button label="Use service" class="px-3" (onClick)="setServiceMessage()"></p-button>
+                    <p-button label="Use Input Property" class="px-3" (onClick)="sendParentMessage()"></p-button>
+                    <p-button label="Use Observable"class="px-3" (onClick)="sendMessageObservable()"></p-button>
+                </div>
+            </div>
+
+            <communication-child (onNewChildMessage)="onNewChildMessage($event)" [newParentMessage]="parentMessage"></communication-child>
+        </div>
+    </div>
+</div>
